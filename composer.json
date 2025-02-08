@@ -55,7 +55,9 @@
     }
   },
   "scripts": {
+    "post-create-project-cmd": "pnpm install || npm install",
     "start": "php -S localhost:8080 -t public",
-    "test": "phpunit"
+    "test": "phpunit",
+    "deploy": "node ./bin/deploy.js"
   }
 }

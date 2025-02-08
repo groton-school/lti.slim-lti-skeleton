@@ -1,6 +1,9 @@
+.env
+.env.*
 .idea/
 .vscode/
 /coverage/
+/node_modules/
 /vendor/
 /logs/*
 !/logs/README.md
