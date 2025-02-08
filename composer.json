@@ -22,6 +22,8 @@
     }
   ],
   "require": {
+    "groton-school/slim-lti-shim": "dev-main",
+    "groton-school/slim-lti-gae-shim": "dev-main",
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
     "monolog/monolog": "^2.8",
