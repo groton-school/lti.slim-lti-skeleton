@@ -1,11 +1,14 @@
 import gcloud from '@battis/partly-gcloudy';
 import { Core } from '@battis/qui-cli.core';
+import { Root } from '@battis/qui-cli.root';
 import { Shell } from '@battis/qui-cli.shell';
 import path from 'node:path';
 
 (async () => {
-  Core.configure({ root: { root: path.dirname(import.meta.dirname) } });
-  const args = await Core.init({
+  Root.configure({ root: path.dirname(import.meta.dirname) });
+  const {
+    values: { force }
+  } = await Core.init({
     flag: {
       force: {
         short: 'f',
@@ -13,15 +16,13 @@ import path from 'node:path';
       }
     }
   });
-  const {
-    values: { force }
-  } = args;
+  const configure = force || !process.env.PROJECT;
 
-  if (process.env.PROJECT && !force) {
-    await gcloud.batch.appEngineDeployAndCleanup({ retainVersions: 2 });
-  } else {
-    const { project } = await gcloud.batch.appEnginePublish();
+  const { project } = await gcloud.batch.appEngineDeployAndCleanup({
+    retainVersions: 2
+  });
 
+  if (configure) {
     await gcloud.services.enable(gcloud.services.API.CloudFirestoreAPI);
     const [{ name: database }] = JSON.parse(
       Shell.exec(
@@ -31,6 +32,8 @@ import path from 'node:path';
     Shell.exec(
       `gcloud firestore databases update --type=firestore-native --database="${database}" --project=${project.projectId} --format=json --quiet`
     );
+
+    // TODO configure admin user with generated password
 
     await gcloud.services.enable(
       gcloud.services.API.CloudMemorystoreforMemcachedAPI

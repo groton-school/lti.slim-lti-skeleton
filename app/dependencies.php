@@ -12,7 +12,6 @@ use Packback\Lti1p3\Interfaces\ILtiServiceConnector;
 use Packback\Lti1p3\LtiServiceConnector;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use DI;
 use GrotonSchool\SlimLTI\GAE\Infrastructure\Cache;
 use GrotonSchool\SlimLTI\GAE\Infrastructure\Cookie;
 use GrotonSchool\SlimLTI\GAE\Infrastructure\Database;

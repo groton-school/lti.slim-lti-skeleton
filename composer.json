@@ -16,15 +16,12 @@
   "require": {
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
-    "casbin/casbin": "^4.0",
     "groton-school/slim-lti-gae-shim": "dev-main",
     "groton-school/slim-lti-shim": "dev-main",
-    "groton-school/firestore-http-basic-authenticator": "dev-main",
     "monolog/monolog": "^2.8",
     "php-di/php-di": "^7.0",
     "slim/psr7": "^1.7",
-    "slim/slim": "^4.14",
-    "tuupola/slim-basic-auth": "^3.4"
+    "slim/slim": "^4.14"
   },
   "require-dev": {
     "franzl/studio": "^0.16.0",
