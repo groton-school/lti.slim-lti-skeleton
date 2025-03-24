@@ -1,5 +1,6 @@
 {
   "name": "groton-school/slim-lti-skeleton",
+  "version": "0.0.0",
   "description": "A Slim Framework skeleton application for rapid development",
   "keywords": [
     "microframework",
@@ -16,8 +17,8 @@
   "require": {
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
-    "groton-school/slim-lti-gae-shim": "dev-main",
-    "groton-school/slim-lti-shim": "dev-main",
+    "groton-school/slim-lti-gae-shim": "self.version",
+    "groton-school/slim-lti-shim": "self.version",
     "monolog/monolog": "^2.8",
     "php-di/php-di": "^7.0",
     "slim/psr7": "^1.7",
