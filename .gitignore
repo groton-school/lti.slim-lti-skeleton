@@ -1,10 +1,11 @@
 .env
 .env.*
 .idea/
+.phpunit.result.cache
 .vscode/
 /coverage/
-/node_modules/
-/vendor/
 /logs/*
 !/logs/README.md
-.phpunit.result.cache
+/node_modules/
+/tools/
+/vendor/
