@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1f8edcc467ec05228b931b2ef38213e",
+    "content-hash": "46723908e87b9579902c9b9e038d268a",
     "packages": [
         {
             "name": "brick/math",
@@ -899,11 +899,11 @@
         },
         {
             "name": "groton-school/slim-action",
-            "version": "0.0.0",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../../packages/slim-action",
-                "reference": "9a21d67c6d1bb696a9d7872c5353fc1260e4760d"
+                "reference": "e5e4fbcab7ee9d57a3f02f6b75f2be09563119e7"
             },
             "require": {
                 "slim/psr7": "^1.7",
@@ -939,17 +939,17 @@
         },
         {
             "name": "groton-school/slim-lti-gae-shim",
-            "version": "0.0.0",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../../packages/slim-lti-gae-shim",
-                "reference": "2eabdb0914c2cb914201d03ec5697c39995c4b1c"
+                "reference": "f20603f66ff7af623b92bfd56b7e9a1069d36743"
             },
             "require": {
                 "google/appengine-php-sdk": "^2.2",
                 "google/cloud-firestore": "^1.48",
                 "google/cloud-logging": "^1.32",
-                "groton-school/slim-lti-shim": "0.0.0",
+                "groton-school/slim-lti-shim": "dev-main",
                 "guzzlehttp/guzzle": "^7.9",
                 "packbackbooks/lti-1p3-tool": "^6.2",
                 "php-di/php-di": "^7.0",
@@ -987,14 +987,14 @@
         },
         {
             "name": "groton-school/slim-lti-shim",
-            "version": "0.0.0",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../../packages/slim-lti-shim",
-                "reference": "2cc69b7a8af4c73c76294a2c33afcc73bdc08c66"
+                "reference": "eccc332450d343e93759d2d06f15ab352909ef61"
             },
             "require": {
-                "groton-school/slim-action": "0.0.0",
+                "groton-school/slim-action": "dev-main",
                 "packbackbooks/lti-1p3-tool": "^6.2",
                 "slim/psr7": "^1.7"
             },
@@ -6506,9 +6506,13 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {},
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "groton-school/slim-action": 20,
+        "groton-school/slim-lti-gae-shim": 20,
+        "groton-school/slim-lti-shim": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.4 || ^8.0",
