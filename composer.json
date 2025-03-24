@@ -17,8 +17,8 @@
   "require": {
     "php": "^7.4 || ^8.0",
     "ext-json": "*",
-    "groton-school/slim-lti-gae-shim": "self.version",
-    "groton-school/slim-lti-shim": "self.version",
+    "groton-school/slim-lti-gae-shim": "0.0.0",
+    "groton-school/slim-lti-shim": "0.0.0",
     "monolog/monolog": "^2.8",
     "php-di/php-di": "^7.0",
     "slim/psr7": "^1.7",
