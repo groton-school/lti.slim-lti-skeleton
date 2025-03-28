@@ -3,6 +3,7 @@
 .idea/
 .phpunit.result.cache
 .vscode/
+.nova/
 /coverage/
 /logs/*
 !/logs/README.md
